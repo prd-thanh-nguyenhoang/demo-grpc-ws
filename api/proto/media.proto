@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package media;
+
+service MediaService {
+  rpc ProcessFile (FileRequest) returns (FileResponse);
+}
+
+message FileRequest {
+  string filename = 1;
+  int32 timeout = 2;
+  bytes file = 3;
+}
+
+message FileResponse {
+  string message = 1;
+}

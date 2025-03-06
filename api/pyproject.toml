@@ -18,6 +18,9 @@ build-backend = "poetry.core.masonry.api"
 [tool.poetry.dependencies]
 python = ">=3.11"
 uvicorn = "^0.23.0"
-fastapi = "^0.110.0"  # Thêm dòng này
-requests = "^2.31.0"  # Thêm dòng này vì bạn có dùng requests
+fastapi = "^0.110.0"  
+requests = "^2.31.0" 
 python-multipart = "^0.0.7"
+grpcio = "^1.60.0"
+grpcio-tools = "^1.60.0"
+websockets = "^10.0" 

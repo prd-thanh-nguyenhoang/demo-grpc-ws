@@ -8,6 +8,9 @@ WORKDIR /app
 COPY package.json pnpm-lock.yaml ./
 RUN npm install -g pnpm && pnpm install
 
+# Copy thư mục proto trước để Docker cache
+COPY proto /app/proto
+
 # Copy toàn bộ source code vào container
 COPY . .
 
