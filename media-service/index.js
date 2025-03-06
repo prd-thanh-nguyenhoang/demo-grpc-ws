@@ -29,7 +29,8 @@ function processFile(call, callback) {
       console.log(`[Media Service] Completed processing: ${filename}`);
 
       // Gửi response cho Core thông qua callback
-      callback(null, { message: `Processed (gRPC): ${filename}` });
+      const message = filename == "main.cpp" ? "Error" : "Success";
+      callback(null, { message: `Processed (gRPC): ${message}` });
       console.log(
         `[Media Service] Sent response to Core: Processed (gRPC): ${filename}`
       );
