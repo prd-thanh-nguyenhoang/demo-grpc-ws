@@ -1,0 +1,31 @@
+version: "3.8"
+
+services:
+  ui:
+    build:
+      context: ./ui
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173"
+    depends_on:
+      - api
+    environment:
+      - REACT_APP_API_URL=http://localhost:8000
+
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    depends_on:
+      - media-service
+    environment:
+      - MEDIA_SERVICE_URL=http://media-service:5000
+
+  media-service:
+    build:
+      context: ./media-service
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"

@@ -1,0 +1,66 @@
+# 1️⃣ Ignore hệ thống
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+.env
+# 2️⃣ Ignore Node.js (cho UI & media-service)
+ui/node_modules/
+ui/npm-debug.log
+ui/yarn.lock
+ui/pnpm-lock.yaml
+ui/dist/
+ui/build/
+ui/.env
+ui/.env.local
+ui/.env.*.local
+
+media-service/node_modules/
+media-service/npm-debug.log
+media-service/yarn.lock
+media-service/pnpm-lock.yaml
+media-service/dist/
+media-service/build/
+media-service/.env
+media-service/.env.local
+media-service/.env.*.local
+
+# 3️⃣ Ignore Python (cho API - FastAPI)
+api/__pycache__/
+api/*.pyc
+api/*.pyo
+api/*.pyd
+api/.Python
+api/venv/
+api/pip-log.txt
+api/poetry.lock
+api/.env
+api/.env.local
+api/.env.*.local
+
+# 4️⃣ Ignore Docker
+docker/*.pid
+docker/*.log
+docker/*.swp
+docker-compose.override.yml
+.env.docker
+
+# 5️⃣ Ignore Proto files compiled outputs
+proto/*.pyc
+proto/*.js
+proto/*.ts
+proto/gen/
+
+# 6️⃣ Ignore Uploads & Temp Files
+uploads/
+temp/
+tmp/
+
+# 7️⃣ Ignore Logs
+logs/
+*.log
+nohup.out
+
+# 8️⃣ Ignore Mac/Linux system files
+*.swp
+*~

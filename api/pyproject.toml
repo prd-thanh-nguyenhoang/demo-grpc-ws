@@ -1,0 +1,23 @@
+[project]
+name = "api"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Thanh Nguyen Hoang",email = "thanh.nguyenhoang@paradox.ai"}
+]
+readme = "./README.md"
+requires-python = ">=3.11"
+dependencies = [
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.dependencies]
+python = ">=3.11"
+uvicorn = "^0.23.0"
+fastapi = "^0.110.0"  # Thêm dòng này
+requests = "^2.31.0"  # Thêm dòng này vì bạn có dùng requests
+python-multipart = "^0.0.7"
